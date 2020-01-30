@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+ {% include "nav_bar.html" %}
+<div>
+ <form method="POST">
+   {% csrf_token %}
+   <fieldset>
+     <legend> Jion Now</legend>
+     {{form.as_p}}
+   </fieldset>
+   <button class='btn' type='submit'>Sign Up</button>
+ </form>
+</div>
+
+{% endblock content %}
